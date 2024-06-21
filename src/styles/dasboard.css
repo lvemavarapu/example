@@ -1,0 +1,18 @@
+.dashboard-page {
+    border: 1px solid;
+    position: absolute;
+    left: 25%;
+    margin-right:10%;
+
+    /*transform: translate(-50%, -50%);*/
+    padding: 10px;
+}
+
+.onboarding{
+    display: inline-flex;
+    padding:12px;
+}
+.items-onboarding{
+    padding:24px;
+    margin-top: 12px;
+}

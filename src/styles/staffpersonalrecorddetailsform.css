@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+*{
+
+    font-family: 'Lato', SansSerif, serif;
+}
+label{
+    font-size: medium;
+    display:flex;
+}
+input[type="text"]{
+                    height: 30px;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    align-self: stretch;
+                    flex: 1 0 0;
+                    border:1px solid lightgrey;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width:800px;
+    height: auto;
+    align-items: flex-start;
+    gap: 24px;
+    border:1px solid lightgrey;
+    padding:24px 24px 24px 24px;
+}
+#type-of-employment{
+    display:flex;
+    gap:8px;
+    }
+input[type="checkbox"]{
+    width:16px;
+    height:16px;
+    border-radius:4px;
+    padding-left:4px;
+    border:1px solid lightgray;
+}
+input[type="date"]{
+    height: 30px;
+    border:1px solid lightgrey;
+}
