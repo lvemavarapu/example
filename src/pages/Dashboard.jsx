@@ -1,15 +1,11 @@
 import "../styles/dasboard.css";
 import onboarding from "../assets/onboarding.jpg"
-import React, { useContext, useEffect, useState } from 'react';
-import axios from '../axiosconfig';
-import { AuthContext } from '../AuthContext';
+import React, { useEffect, useState } from 'react';
 import {Link, useNavigate,NavLink} from "react-router-dom";
 
 
 
 function Dashboard() {
-
-
     return (
         <>
             <h4> welcome to our Employee Portal</h4>

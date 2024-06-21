@@ -1,8 +1,6 @@
 import react, {useState} from "react";
-import axios from 'axios';
 import Grid from "@mui/material/Grid";
 import "../styles/staffpersonalrecorddetailsform.css";
-import Box from '@mui/material/Box';
 
 export function StaffpersonalRecordDetails() {
     const [values, setValues] = useState({
@@ -31,16 +29,17 @@ export function StaffpersonalRecordDetails() {
     };
           return (
               <>
-                  <h4> Staff Personal Record Details</h4>
-                  <br/>
-                  <br/>
 
                   <Grid container spacing={6}
                         justifyContent="center"
-                        // alignItems="center"
+                        alignItems="center"
                         >
+                          
                       <form className="personalDetails-form" onSubmit={handleSubmit}>
                           <div className="wrapper">
+                            <h4> Staff Personal Record Details</h4>
+                            <br/>
+                            <br/>
 
                               <div>
                                   {!valid && (
@@ -112,8 +111,9 @@ export function StaffpersonalRecordDetails() {
                               </div>
                               <br/>
                               <h5>Type of Employment</h5>
-                              <br/>
+                              <br />
                               <div id="type-of-employment">
+                              
                                   <label>
                                       <input
                                           name="qual"
@@ -135,7 +135,7 @@ export function StaffpersonalRecordDetails() {
                                   <br/>
 
                               </div>
-
+                              <br/>
                               <input
                                   label="Position"
                                   className="form-field"
@@ -144,11 +144,77 @@ export function StaffpersonalRecordDetails() {
                                   name="position"
                                   onChange={handleInputChange}
                               />
+                              <br />
                               <div className="date of birth">
                                   <label htmlFor="date">Date of Birth</label>
                                   <input type="date" name="date" id="date"></input>
                               </div>
                               <br />
+                              <div>
+                                  {!valid && (
+                                      <>
+                                          <label className="form__label" htmlFor="given-name">Emergency Contact Name </label>
+                                          <input
+                                              label="emergency"
+                                              className="form-field"
+                                              type="text"
+                                              placeholder="Emergency contact anme"
+                                              name="semergency contact name"  
+                                              onChange={handleInputChange}
+                                          />
+                                      </>
+                                  )}
+                              </div>
+                              <div>
+                                  {!valid && (
+                                      <>
+                                          <label className="form__label"
+                                                 htmlFor="othernames">Relationship </label>
+                                          <input
+                                              label="relationship["
+                                              className="form-field"
+                                              type="text"
+                                              placeholder="otherNames"
+                                              name="otherName"
+                                              value={values.otherNames}
+                                              onChange={handleInputChange}
+                                          />
+                                      </>
+                                  )}
+                              </div>
+                              <div>
+                                  {!valid && (
+                                      <>
+                                          <label className="form__label" htmlFor="given-name">Surname </label>
+                                          <input
+                                              label="Surname"
+                                              className="form-field"
+                                              type="text"
+                                              placeholder="Surname"
+                                              name="surname"
+                                              value={values.surname}
+                                              onChange={handleInputChange}
+                                          />
+                                      </>
+                                  )}
+                              </div>
+                              <div>
+                                  {!valid && (
+                                      <>
+                                          <label className="form__label"
+                                                 htmlFor="othernames">Other Names </label>
+                                          <input
+                                              label="otherName"
+                                              className="form-field"
+                                              type="text"
+                                              placeholder="otherNames"
+                                              name="otherName"
+                                              value={values.otherNames}
+                                              onChange={handleInputChange}
+                                          />
+                                      </>
+                                  )}
+                              </div>
 
                           </div>
                       </form>
